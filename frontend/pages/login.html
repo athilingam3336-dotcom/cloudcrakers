@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | CloudCrackers</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="../icons/favicon.ico">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-visual">
+            <div>
+                <span class="eyebrow">Welcome Back</span>
+                <h2>Every Diwali Deserves A <span class="highlight">Brighter Sky</span></h2>
+            </div>
+        </div>
+        <div class="auth-form-side">
+            <div class="auth-card">
+                <a href="../index.html" class="auth-brand" aria-label="CloudCrackers home">
+                    <span class="logo-text">Cloud<em>Crackers</em></span>
+                </a>
+
+                <h1>Log In</h1>
+                <p class="muted-text">Welcome back! Please enter your details.</p>
+
+                <!-- Example server-side error — remove/hide when there's no auth failure -->
+                <!--
+                <div class="alert alert-error" role="alert">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Invalid email or password. Please try again.
+                </div>
+                -->
+
+                <form novalidate>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-group">
+                            <i class="fa-regular fa-envelope input-icon" aria-hidden="true"></i>
+                            <input
+                                class="form-control"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                aria-describedby="email-error"
+                                required>
+                        </div>
+                        <!-- <p class="field-error" id="email-error"><i class="fa-solid fa-circle-exclamation"></i> Enter a valid email address.</p> -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-lock input-icon" aria-hidden="true"></i>
+                            <input
+                                class="form-control"
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="••••••••"
+                                autocomplete="current-password"
+                                aria-describedby="password-error"
+                                required>
+                            <button type="button" class="input-toggle" aria-label="Show password" aria-pressed="false" data-toggle-password="password">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <!-- <p class="field-error" id="password-error"><i class="fa-solid fa-circle-exclamation"></i> Incorrect password.</p> -->
+
+                        <div class="form-hint-row">
+                            <label class="form-check"><input type="checkbox" name="remember"> Remember me</label>
+                            <a href="#" class="link-secondary">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                </form>
+
+                <div class="auth-divider">OR CONTINUE WITH</div>
+                <div class="auth-social">
+                    <button type="button" class="btn btn-outline" style="flex:1;" aria-label="Sign in with Google">
+                        <i class="fa-brands fa-google" aria-hidden="true"></i> Google
+                    </button>
+                    <button type="button" class="btn btn-outline" style="flex:1;" aria-label="Sign in with Facebook">
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook
+                    </button>
+                </div>
+
+                <p class="auth-security"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Your information is encrypted and secure</p>
+
+                <p class="auth-switch">Don't have an account? <a href="register.html">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Password visibility toggle
+        document.querySelectorAll('[data-toggle-password]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var input = document.getElementById(btn.getAttribute('data-toggle-password'));
+                var isHidden = input.type === 'password';
+                input.type = isHidden ? 'text' : 'password';
+                btn.setAttribute('aria-pressed', String(isHidden));
+                btn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+                btn.querySelector('i').className = isHidden ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye';
+            });
+        });
+    </script>
+</body>
+</html>

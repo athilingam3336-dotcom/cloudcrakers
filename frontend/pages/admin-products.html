@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | CloudCrackers Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="../icons/favicon.ico">
+</head>
+<body>
+    <div class="admin-body">
+        <aside class="admin-sidebar">
+            <a href="admin-dashboard.html"><span class="logo-text">Cloud<em>Crackers</em></span></a>
+            <nav class="admin-nav">
+                <div class="nav-label">Main</div>
+                <a href="admin-dashboard.html" class=""><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="admin-orders.html" class=""><i class="fa-solid fa-box"></i> Orders</a>
+                <a href="admin-products.html" class="active"><i class="fa-solid fa-fire"></i> Products</a>
+                <a href="admin-users.html" class=""><i class="fa-solid fa-users"></i> Users</a>
+                <div class="nav-label">Other</div>
+                <a href="../index.html"><i class="fa-solid fa-store"></i> View Store</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            <div class="admin-sidebar-foot">
+                <div class="profile-nav"><a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a></div>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <h1>Manage Products</h1>
+                <div class="admin-topbar-right">
+                    <i class="fa-regular fa-bell" style="color:var(--muted);"></i>
+                    <div class="table-avatar">AK</div>
+                </div>
+            </div>
+            <div class="admin-content">
+                <div class="search-filter-bar">
+                    <input class="form-control" type="text" placeholder="Search products...">
+                    <select class="form-control"><option>All Categories</option><option>Sparklers</option><option>Rockets</option><option>Gift Boxes</option></select>
+                    <select class="form-control"><option>All Status</option><option>In Stock</option><option>Out of Stock</option></select>
+                    <button class="btn btn-primary" style="margin-left:auto;"><i class="fa-solid fa-plus"></i> Add Product</button>
+                </div>
+
+                <div class="card">
+                    <table class="data-table">
+                        <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="table-user"><div class="table-avatar"><i class="fa-solid fa-sparkles"></i></div> Electric Sparklers (10")</div></td>
+                                <td>Sparklers</td><td>₹149</td><td>420</td>
+                                <td><span class="status-pill status-delivered">In Stock</span></td>
+                                <td><div class="table-actions"><button><i class="fa-regular fa-pen-to-square"></i></button><button class="danger"><i class="fa-regular fa-trash-can"></i></button></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="table-user"><div class="table-avatar"><i class="fa-solid fa-rocket"></i></div> Sky Shot Rocket Combo</div></td>
+                                <td>Rockets</td><td>₹899</td><td>24</td>
+                                <td><span class="status-pill status-pending">Low Stock</span></td>
+                                <td><div class="table-actions"><button><i class="fa-regular fa-pen-to-square"></i></button><button class="danger"><i class="fa-regular fa-trash-can"></i></button></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="table-user"><div class="table-avatar"><i class="fa-solid fa-circle-notch"></i></div> Ground Chakkar Pack</div></td>
+                                <td>Chakras</td><td>₹329</td><td>150</td>
+                                <td><span class="status-pill status-delivered">In Stock</span></td>
+                                <td><div class="table-actions"><button><i class="fa-regular fa-pen-to-square"></i></button><button class="danger"><i class="fa-regular fa-trash-can"></i></button></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="table-user"><div class="table-avatar"><i class="fa-solid fa-gift"></i></div> Family Celebration Box</div></td>
+                                <td>Gift Boxes</td><td>₹2,499</td><td>0</td>
+                                <td><span class="status-pill status-cancelled">Out of Stock</span></td>
+                                <td><div class="table-actions"><button><i class="fa-regular fa-pen-to-square"></i></button><button class="danger"><i class="fa-regular fa-trash-can"></i></button></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination"><a href="#">‹</a><span class="active">1</span><a href="#">2</a><a href="#">3</a><a href="#">›</a></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

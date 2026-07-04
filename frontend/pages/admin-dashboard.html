@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CloudCrackers Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="../icons/favicon.ico">
+</head>
+<body>
+    <div class="admin-body">
+        <aside class="admin-sidebar">
+            <a href="admin-dashboard.html"><span class="logo-text">Cloud<em>Crackers</em></span></a>
+            <nav class="admin-nav">
+                <div class="nav-label">Main</div>
+                <a href="admin-dashboard.html" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="admin-orders.html" class=""><i class="fa-solid fa-box"></i> Orders</a>
+                <a href="admin-products.html" class=""><i class="fa-solid fa-fire"></i> Products</a>
+                <a href="admin-users.html" class=""><i class="fa-solid fa-users"></i> Users</a>
+                <div class="nav-label">Other</div>
+                <a href="../index.html"><i class="fa-solid fa-store"></i> View Store</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            <div class="admin-sidebar-foot">
+                <div class="profile-nav"><a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a></div>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <h1>Dashboard</h1>
+                <div class="admin-topbar-right">
+                    <i class="fa-regular fa-bell" style="color:var(--muted);"></i>
+                    <div class="table-avatar">AK</div>
+                </div>
+            </div>
+            <div class="admin-content">
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-top"><div class="stat-icon gold"><i class="fa-solid fa-indian-rupee-sign"></i></div><span class="stat-trend up">▲ 12.4%</span></div>
+                        <div class="stat-value">₹8,42,600</div>
+                        <div class="stat-label">Total Revenue</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-top"><div class="stat-icon cyan"><i class="fa-solid fa-box"></i></div><span class="stat-trend up">▲ 8.1%</span></div>
+                        <div class="stat-value">1,284</div>
+                        <div class="stat-label">Total Orders</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-top"><div class="stat-icon ember"><i class="fa-solid fa-users"></i></div><span class="stat-trend up">▲ 5.6%</span></div>
+                        <div class="stat-value">6,530</div>
+                        <div class="stat-label">Registered Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-top"><div class="stat-icon green"><i class="fa-solid fa-fire"></i></div><span class="stat-trend down">▼ 2.3%</span></div>
+                        <div class="stat-value">238</div>
+                        <div class="stat-label">Products Listed</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Recent Orders</h3>
+                        <a href="admin-orders.html" class="btn btn-outline btn-sm">View All</a>
+                    </div>
+                    <table class="data-table">
+                        <thead><tr><th>Order ID</th><th>Customer</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>#CC-10482</td><td>Arun Kumar</td><td>2 Jul 2026</td><td>₹4,009</td><td><span class="status-pill status-delivered">Delivered</span></td></tr>
+                            <tr><td>#CC-10481</td><td>Divya Shree</td><td>2 Jul 2026</td><td>₹1,299</td><td><span class="status-pill status-processing">Processing</span></td></tr>
+                            <tr><td>#CC-10480</td><td>Vignesh R</td><td>1 Jul 2026</td><td>₹899</td><td><span class="status-pill status-pending">Pending</span></td></tr>
+                            <tr><td>#CC-10479</td><td>Priya M</td><td>1 Jul 2026</td><td>₹2,499</td><td><span class="status-pill status-delivered">Delivered</span></td></tr>
+                            <tr><td>#CC-10478</td><td>Karthik S</td><td>30 Jun 2026</td><td>₹329</td><td><span class="status-pill status-cancelled">Cancelled</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

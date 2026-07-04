@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders | CloudCrackers Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="../icons/favicon.ico">
+</head>
+<body>
+    <div class="admin-body">
+        <aside class="admin-sidebar">
+            <a href="admin-dashboard.html"><span class="logo-text">Cloud<em>Crackers</em></span></a>
+            <nav class="admin-nav">
+                <div class="nav-label">Main</div>
+                <a href="admin-dashboard.html" class=""><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="admin-orders.html" class="active"><i class="fa-solid fa-box"></i> Orders</a>
+                <a href="admin-products.html" class=""><i class="fa-solid fa-fire"></i> Products</a>
+                <a href="admin-users.html" class=""><i class="fa-solid fa-users"></i> Users</a>
+                <div class="nav-label">Other</div>
+                <a href="../index.html"><i class="fa-solid fa-store"></i> View Store</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            <div class="admin-sidebar-foot">
+                <div class="profile-nav"><a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a></div>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <h1>Manage Orders</h1>
+                <div class="admin-topbar-right">
+                    <i class="fa-regular fa-bell" style="color:var(--muted);"></i>
+                    <div class="table-avatar">AK</div>
+                </div>
+            </div>
+            <div class="admin-content">
+                <div class="tabs">
+                    <a href="#" class="active">All Orders</a>
+                    <a href="#">Pending</a>
+                    <a href="#">Processing</a>
+                    <a href="#">Delivered</a>
+                    <a href="#">Cancelled</a>
+                </div>
+
+                <div class="search-filter-bar">
+                    <input class="form-control" type="text" placeholder="Search by order ID or customer...">
+                    <select class="form-control"><option>Sort: Newest</option><option>Sort: Oldest</option><option>Amount: High to Low</option></select>
+                </div>
+
+                <div class="card">
+                    <table class="data-table">
+                        <thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Date</th><th>Amount</th><th>Status</th><th>Actions</th></tr></thead>
+                        <tbody>
+                            <tr><td>#CC-10482</td><td>Arun Kumar</td><td>2</td><td>2 Jul 2026</td><td>₹4,009</td><td><span class="status-pill status-delivered">Delivered</span></td><td><div class="table-actions"><button><i class="fa-regular fa-eye"></i></button></div></td></tr>
+                            <tr><td>#CC-10481</td><td>Divya Shree</td><td>1</td><td>2 Jul 2026</td><td>₹1,299</td><td><span class="status-pill status-processing">Processing</span></td><td><div class="table-actions"><button><i class="fa-regular fa-eye"></i></button></div></td></tr>
+                            <tr><td>#CC-10480</td><td>Vignesh R</td><td>1</td><td>1 Jul 2026</td><td>₹899</td><td><span class="status-pill status-pending">Pending</span></td><td><div class="table-actions"><button><i class="fa-regular fa-eye"></i></button></div></td></tr>
+                            <tr><td>#CC-10479</td><td>Priya M</td><td>3</td><td>1 Jul 2026</td><td>₹2,499</td><td><span class="status-pill status-delivered">Delivered</span></td><td><div class="table-actions"><button><i class="fa-regular fa-eye"></i></button></div></td></tr>
+                            <tr><td>#CC-10478</td><td>Karthik S</td><td>1</td><td>30 Jun 2026</td><td>₹329</td><td><span class="status-pill status-cancelled">Cancelled</span></td><td><div class="table-actions"><button><i class="fa-regular fa-eye"></i></button></div></td></tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination"><a href="#">‹</a><span class="active">1</span><a href="#">2</a><a href="#">3</a><a href="#">›</a></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
